@@ -20,13 +20,16 @@ class JobsController extends CI_Controller {
         $JobSalary=$this->input->post('JobSalary');       
         $CloseDate=$this->input->post('CloseDate');
         $OpenDate=$this->input->post('OpenDate');
-        echo $CompanyName,$CompanyEmail,$JobTitle,$JobDescription,$JobDescription,$JobLocation,$JobSalary,$CloseDate,$OpenDate;
+        //echo $CompanyName,$CompanyEmail,$JobTitle,$JobDescription,$JobDescription,$JobLocation,$JobSalary,$CloseDate,$OpenDate;
         
         
-//         $this->load->helper('form');
-//          $this->load->view('Header');
-//        $this->load->view('index');
-//        $this->load->view('Footer');
+        $this->load->model('Job');
+        $this->Job->addJob($CompanyName,$CompanyEmail,$JobTitle,$JobDescription,$JobLocation,$JobLocation,$JobSalary,$JobSalary,$CloseDate,$OpenDate);
+            
+        $this->load->helper('form');
+        $this->load->view('Header');
+        $this->load->view('PostJobs');
+        $this->load->view('Footer');
 //            
        
     }

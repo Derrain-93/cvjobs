@@ -18,5 +18,9 @@ class Login extends CI_Controller {
         $this->load->view('Login');
         $this->load->view('Footer');
     }
+    public function authenticate()
+    {
+        
+    }
 
 }
