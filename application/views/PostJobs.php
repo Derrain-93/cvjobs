@@ -123,14 +123,12 @@
                             </div>
                         </div>
                     </div>
-
-                      
                     
                     <div class="col-lg-6">
                         <div class="post-job-image-preview-bg">
                             <div class="post-job-image-preview-wrapper">
                                 <div class="row-fluid post-job-image-preview-block">
-                                    <img id="preview" src="img/defaultPreview.png" />
+                                    <img id="preview" src="<?php echo base_url('Assets/img/defaultPreview.png') ?>" />
                                 </div>
                             </div>
                         </div>
@@ -141,153 +139,25 @@
     </div>
     <!-- /.container -->
 
-    <div class="container footer-bg">
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-3">
-                    <h4>CVJobs</h4>
-                    <div class="row">
-                        <a href="#"><p>About Us</p></a>
-                    </div>
-                    <div class="row">
-                        <a href="#"><p>Contact Us</p></a>
-                    </div>
-                    <div class="row">
-                        <a href="#"><p>Terms and Conditions</p></a>
-                    </div>
-                    <div class="row">
-                        <a href="#"><p>Careers at CVJobs.lk</p></a>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <h4>Job Hunter</h4>
-                    <div class="row">
-                        <a href="#"><p>Job Seeker Login</p></a>
-                    </div>
-                    <div class="row">
-                        <a href="#"><p>CV/Career Advise</p></a>
-                    </div>
-                    <div class="row">
-                        <a href="#"><p>Find Foreign Jobs</p></a>
-                    </div>
-                    <div class="row">
-                        <a href="#"><p>Find Course</p></a>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <h4>Recruiter</h4>
-                    <div class="row">
-                        <a href="#"><p>Advertise with Us</p></a>
-                    </div>
-                    <div class="row">
-                        <a href="#"><p>Contact Us for Advertise</p></a>
-                    </div>
-                    <div class="row">
-                        <a href="#"><p>Recruiter Advise</p></a>
-                    </div>
-                    <div class="row">
-                        <a href="#"><p>Registered Recruiters</p></a>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <h4>CVJobs Mobile App</h4>
-                    <div class="row">
-                        <a href="#"><img src="img/Mobile App/PlayStore.png" alt="Play Store" /></a>
-                    </div>
-                    <div class="row">
-                        <br />
-                    </div>
-                    <div class="row">
-                        <a href="#"><img src="img/Mobile App/AppStore.png" alt="App Store" /></a>
-                    </div>
-                    <div class="row">
+    <script>
+        document.getElementById("image").onchange = function () {
+            var reader = new FileReader();
 
-                    </div>
-                </div>
-            </div>
-            <!--<div class="row">
-                    <div class="col-lg-3">
-                            <a href="#"><p>About Us</p></a>
-                    </div>
-                    <div class="col-lg-3">
-                            <a href="#"><p>Job Seeker Login</p></a>
-                    </div>
-                    <div class="col-lg-3">
-                            <a href="#"><p>Advertise with Us</p></a>
-                    </div>
-                    <div class="col-lg-3">
-                            <a href="#"><img src="img/Mobile App/PlayStore.png" alt="Play Store" /></a>
-                    </div>
-            </div>
-            <div class="row">
-                    <div class="col-lg-3">
-                            <a href="#"><p>Contact Us</p></a>
-                    </div>
-                    <div class="col-lg-3">
-                            <a href="#"><p>CV/Career Advise</p></a>
-                    </div>
-                    <div class="col-lg-3">
-                            <a href="#"><p>Contact Us for Advertise</p></a>
-                    </div>
-                    <div class="col-lg-3">
-                            
-                    </div>
-            </div>
-            <div class="row">
-                    <div class="col-lg-3">
-                            <a href="#"><p>Terms and Conditions</p></a>
-                    </div>
-                    <div class="col-lg-3">
-                            <a href="#"><p>Find Foreign Jobs</p></a>
-                    </div>
-                    <div class="col-lg-3">
-                            <a href="#"><p>Recruiter Advise</p></a>
-                    </div>
-                    <div class="col-lg-3">
-                            <a href="#"><img src="img/Mobile App/AppStore.png" alt="App Store" /></a>
-                    </div>
-            </div>
-            <div class="row">
-                    <div class="col-lg-3">
-                            <a href="#"><p>Careers at CVJobs.lk</p></a>
-                    </div>
-                    <div class="col-lg-3">
-                            <a href="#"><p>Find Course</p></a>
-                    </div>
-                    <div class="col-lg-3">
-                            <a href="#"><p>Registered Recruiters</p></a>
-                    </div>
-                    <div class="col-lg-3">
-                            
-                    </div>
-            </div>-->
-        </footer>
-    </div>
-    <!-- /.container -->
-</div>
+            reader.onload = function (e) {
+                // get loaded data and render thumbnail.
+                document.getElementById("preview").src = e.target.result;
+            };
 
-
-
-<script>
-    document.getElementById("image").onchange = function () {
-        var reader = new FileReader();
-
-        reader.onload = function (e) {
-            // get loaded data and render thumbnail.
-            document.getElementById("preview").src = e.target.result;
+            // read the image file as a data URL.
+            reader.readAsDataURL(this.files[0]);
         };
 
-        // read the image file as a data URL.
-        reader.readAsDataURL(this.files[0]);
-    };
-
-    function countChar(val) {
-        var len = val.value.length;
-        if (len >= 201) {
-            val.value = val.value.substring(0, 201);
-        } else {
-            $('#charNum').text(0 + len);
-        }
-    };
-</script>
+        function countChar(val) {
+            var len = val.value.length;
+            if (len >= 201) {
+                val.value = val.value.substring(0, 201);
+            } else {
+                $('#charNum').text(0 + len);
+            }
+        };
+    </script>

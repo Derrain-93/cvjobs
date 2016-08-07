@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -15,13 +14,13 @@
     <link href="<?php echo base_url('Assets/css/bootstrap.min.css') ?>" rel="stylesheet">
 
     <!-- OwlCarousel2 CSS -->
-    <link href="<?php echo base_url('Assets/css/owl.carousel.css')?>" rel="stylesheet">
+    <link href="<?php echo base_url('Assets/css/owl.carousel.css') ?>" rel="stylesheet">
     
     <!-- Checkbox CSS -->
-    <link href="<?php echo base_url('Assets/css/checkbox.css')?>" rel="stylesheet">
+    <link href="<?php echo base_url('Assets/css/checkbox.css') ?>" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="<?php echo base_url('Assets/css/main.css')?>" rel="stylesheet">
+    <link href="<?php echo base_url('Assets/css/main.css') ?>" rel="stylesheet">
 	
 
 
@@ -74,6 +73,9 @@
 						</li>
 						<li>
 							<a href="#">Saved Jobs</a>
+						</li>
+                        <li>
+							<a href="<?php echo base_url('index.php/JobsController') ?>">Post a Job</a>
 						</li>
 						<li>
 							<a href="#">Sign In</a>

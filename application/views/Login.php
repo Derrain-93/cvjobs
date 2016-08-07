@@ -4,9 +4,7 @@
             <div class="row-fluid">
                 <div class="login-wrapper">
                     <div class="col-lg-6 col-lg-offset-3">
-                        <?php 
-//Access them like so
-echo $error ?>
+                        <?php echo $error ?>
                         
                         <?php echo form_open('Login/authenticate', 'class="form-horizontal"'); ?>
                         
@@ -44,73 +42,3 @@ echo $error ?>
         </div>
     </div>
     <!-- /.container -->
-
-    <div class="container footer-bg">
-        <!-- Footer -->
-        <footer>
-            <div class="row">
-                <div class="col-lg-3">
-                    <h4>CVJobs</h4>
-                    <div class="row">
-                        <a href="#"><p>About Us</p></a>
-                    </div>
-                    <div class="row">
-                        <a href="#"><p>Contact Us</p></a>
-                    </div>
-                    <div class="row">
-                        <a href="#"><p>Terms and Conditions</p></a>
-                    </div>
-                    <div class="row">
-                        <a href="#"><p>Careers at CVJobs.lk</p></a>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <h4>Job Hunter</h4>
-                    <div class="row">
-                        <a href="#"><p>Job Seeker Login</p></a>
-                    </div>
-                    <div class="row">
-                        <a href="#"><p>CV/Career Advise</p></a>
-                    </div>
-                    <div class="row">
-                        <a href="#"><p>Find Foreign Jobs</p></a>
-                    </div>
-                    <div class="row">
-                        <a href="#"><p>Find Course</p></a>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <h4>Recruiter</h4>
-                    <div class="row">
-                        <a href="#"><p>Advertise with Us</p></a>
-                    </div>
-                    <div class="row">
-                        <a href="#"><p>Contact Us for Advertise</p></a>
-                    </div>
-                    <div class="row">
-                        <a href="#"><p>Recruiter Advise</p></a>
-                    </div>
-                    <div class="row">
-                        <a href="#"><p>Registered Recruiters</p></a>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <h4>CVJobs Mobile App</h4>
-                    <div class="row">
-                        <a href="#"><img src="Assets/img/Mobile App/PlayStore.png" alt="Play Store" /></a>
-                    </div>
-                    <div class="row">
-                        <br />
-                    </div>
-                    <div class="row">
-                        <a href="#"><img src="Assets/img/Mobile App/AppStore.png" alt="App Store" /></a>
-                    </div>
-                    <div class="row">
-
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
-    <!-- /.container -->
-</div>
