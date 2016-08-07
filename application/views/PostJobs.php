@@ -6,7 +6,7 @@
                     <div class="contact-search-bg">
                         <div class="contact-search-wrapper">
                             
-                            <?php echo form_open('JobsController/PostJob', 'class="form-inline"'); ?>
+                            <?php echo form_open_multipart('JobsController/PostJob', 'class="form-inline"'); ?>
                             
                                 <div class="row">
                                     <div class="col-lg-2">
@@ -110,7 +110,7 @@
                                         <div class="form-group">
                                             <label for="image" class="col-sm-3 control-label">Image</label>
                                             <div class="col-sm-9">
-                                                <input type="file" class="form-control" id="image" accept="image/*" />
+                                                <input type="file" name="userfile" class="form-control" id="image" accept="image/*" />
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -124,6 +124,8 @@
                         </div>
                     </div>
 
+                      
+                    
                     <div class="col-lg-6">
                         <div class="post-job-image-preview-bg">
                             <div class="post-job-image-preview-wrapper">
