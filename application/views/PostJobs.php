@@ -61,11 +61,8 @@
                     <div class="contact-search-bg">
                         <div class="contact-search-wrapper">
                             
+                            <?php echo form_open('JobsController/PostJob', 'class="form-inline"'); ?>
                             
-                           
-                            <?php echo form_open('JobsController/PostJob'); ?> 
-                                
-                                
                                 <div class="row">
                                     <div class="col-lg-2">
                                         <label class="control controlCheckbox">
@@ -95,14 +92,8 @@
                                         </div>
                                     </div>
                                 </div>
-                                
-                                
-                                
-                                <?php form_close() ?>
-                          
                             
-                            
-                            
+                            <?php form_close() ?>
                             
                         </div>
                     </div>

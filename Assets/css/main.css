@@ -37,14 +37,14 @@ body {
 }
 .navbar-default .navbar-header > .navbar-brand {
 	font-size: 5rem;
-	font-weight: JosefinBold;
+	font-family: JosefinBold;
 	color: #fff;
 	float: left;
 	transition: 0.4s ease all;
 }
 .navbar-default .navbar-collapse > .navbar-nav {
 	font-size: 2rem;
-	font-weight: JosefinReg;
+	font-family: JosefinReg;
     background-color: #3026ff; /* For browsers that do not support gradients */
     background-color: -webkit-linear-gradient(#0e46a0, #042074); /* For Safari 5.1 to 6.0 */
     background-color: -o-linear-gradient(#0e46a0, #042074); /* For Opera 11.1 to 12.0 */
@@ -114,7 +114,7 @@ body {
     background-color: #0f066f;
 	color: #fff;
     font-size: 1.8rem;
-    font-weight: JosefinBold;
+    font-family: JosefinBold;
 	border-color: #0f066f;
     position: relative;
     padding: 1% 5%;
@@ -180,13 +180,27 @@ textarea {
 
 
 /* content styles */
-
-/* home page styles */
 .content {
 	position: relative;
 	margin-top: 5%;
 	transition: 0.4s ease all;
 }
+
+/* login page styles */
+.login-wrapper {
+    width: 100%;
+    float: left;
+    position: relative;
+    margin: 7% auto;
+    transition: 0.4s ease all;
+}
+.login-wrapper form .controlCheckbox {
+    color: #3026ff;
+    font-family: JosefinReg;
+    font-size: 1.5rem;
+}
+
+/* home page styles */
 .home-search-bg {
 	background-color: #0f066f;
 	position: relative;
@@ -211,7 +225,7 @@ textarea {
 }
 .home-urgent-opening-bg > .home-urgent-opening-wrapper h4 {
 	color: #0f066f;
-	font-weight: JosefinReg;
+	font-family: JosefinReg;
 	text-align: center;
 }
 .home-job-categories-bg {
@@ -224,7 +238,7 @@ textarea {
 	width: 100%;
 }
 .home-job-categories-bg > .home-job-categories-wrapper li {
-	font-weight: JosefinBold;
+	font-family: JosefinBold;
 	list-style: none;
 	position: relative;
 	margin: 10px auto !important;
@@ -252,7 +266,7 @@ textarea {
 	padding: 5px 0px 5px 10px;
 }
 .home-recommended-jobs-bg > .home-recommended-jobs-wrapper li {
-	font-weight: JosefinBold;
+	font-family: JosefinBold;
 	list-style: none;
 	position: relative;
 	margin: 5px auto !important;
@@ -302,7 +316,7 @@ textarea {
 	width: 100%;
 }
 .searched-job-categories-bg > .searched-job-categories-wrapper li {
-	font-weight: JosefinBold;
+	font-family: JosefinBold;
 	list-style: none;
 	position: relative;
 	margin: 10px auto !important;
@@ -318,14 +332,14 @@ textarea {
 }
 .searched-job-wrapper .searched-job-title {
     font-size: 1.5rem;
-    font-weight: JosefinBold;
+    font-family: JosefinBold;
     line-height: 1.75;
 }
 .searched-job-wrapper .searched-job-title > .searched-job-category {
     background-color: #0f066f;
     color: #fff;
     font-size: 1.5rem;
-    font-weight: JosefinBold;
+    font-family: JosefinBold;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -341,10 +355,10 @@ textarea {
 .searched-job-wrapper .searched-job-bg .table tr .searched-job-number-list {
     background-color: #08840c;
     color: #fff;
-    font-weight: JosefinBold;
+    font-family: JosefinBold;
 }
 .searched-job-wrapper .searched-job-bg .table tr td .searched-job-post {
-    font-weight: JosefinBold;
+    font-family: JosefinBold;
 }
 .searched-job-wrapper .searched-job-bg .table tr td .searched-job-view-details {
     border: 1px solid #08840c;
@@ -355,7 +369,7 @@ textarea {
 }
 .searched-job-wrapper .searched-job-bg .table tr td .searched-job-save {
     color: #000;
-    font-weight: JosefinBold;
+    font-family: JosefinBold;
     cursor: pointer;
     text-decoration: none;
 }
@@ -441,7 +455,7 @@ textarea {
 .contact-message-title {
     color: #0f066f;
     font-size: 2.5rem;
-    font-weight: JosefinBold;
+    font-family: JosefinBold;
 }
 .contact-message-title > span {
     color: #000;
@@ -462,7 +476,7 @@ textarea {
 }
 .contact-message-bg > .contact-message-wrapper span {
     font-size: 1.5rem;
-    font-weight: JosefinBold;
+    font-family: JosefinBold;
 }
 .contact-message-bg > .contact-message-wrapper form {
     position: relative;
@@ -512,13 +526,13 @@ textarea {
     margin: 5px 0;
 }
 .footer-bg > footer h4 {
-    font-weight: JosefinBold;
+    font-family: JosefinBold;
 	position: relative;
 	margin-bottom: 35px;
 }
 .footer-bg > footer a {
 	color: #fff;
-	font-weight: JosefinBold;
+	font-family: JosefinBold;
 	line-height: 2;
 }
 .footer-bg > footer a > p, .footer-bg > footer a > img {
@@ -533,6 +547,10 @@ textarea {
 		position: relative;
 		margin-top: 10%;
 	}
+    .login-wrapper {
+        position: relative;
+        margin: 10% auto;
+    }
     .contact-side-advert-bg > .contact-side-advert-wrapper > .contact-side-advert-block:last-child {
         position: relative;
         margin-bottom: 5%;
