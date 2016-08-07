@@ -45,7 +45,11 @@ body {
 .navbar-default .navbar-collapse > .navbar-nav {
 	font-size: 2rem;
 	font-weight: JosefinReg;
-	background-color: #3026ff;
+    background-color: #3026ff; /* For browsers that do not support gradients */
+    background-color: -webkit-linear-gradient(#0e46a0, #042074); /* For Safari 5.1 to 6.0 */
+    background-color: -o-linear-gradient(#0e46a0, #042074); /* For Opera 11.1 to 12.0 */
+    background-color: -moz-linear-gradient(#0e46a0, #042074); /* For Firefox 3.6 to 15 */
+    background-color: linear-gradient(#0e46a0, #042074); /* Standard syntax */
 	color: #fff;
 	width: 100%;
 	float: left;
@@ -490,7 +494,11 @@ textarea {
 
 /* footer styles */
 .footer-bg {
-	background-color: #0f066f;
+    background-color: #041f74; /* For browsers that do not support gradients */
+    background-color: -webkit-linear-gradient(#0e4dbc, #041f74); /* For Safari 5.1 to 6.0 */
+    background-color: -o-linear-gradient(#0e4dbc, #041f74); /* For Opera 11.1 to 12.0 */
+    background-color: -moz-linear-gradient(#0e4dbc, #041f74); /* For Firefox 3.6 to 15 */
+    background-color: linear-gradient(#0e4dbc, #041f74); /* Standard syntax */
 	color: #fff;
 	width: 100%;
 	float: left;
