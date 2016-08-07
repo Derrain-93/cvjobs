@@ -121,38 +121,38 @@
                                         <div class="form-group">
                                             <label for="contactCompany" class="col-sm-3 control-label">Company Name</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="contactCompany" placeholder="Company Name" />
+                                                <input type="text" id="CompanyName" name="CompanyName"  class="form-control" id="contactCompany" placeholder="Company Name" />
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="contactCompanyEmail" class="col-sm-3 control-label">Company Email</label>
                                             <div class="col-sm-9">
-                                                <input type="email" class="form-control" id="contactCompanyEmail" placeholder="Company Email" />
+                                                <input type="email" name="CompanyEmail" class="form-control" id="contactCompanyEmail" placeholder="Company Email" />
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="jobTitle" class="col-sm-3 control-label">Job Title</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="jobTitle" placeholder="Job Title" />
+                                                <input type="text" name="JobTitle" class="form-control" id="jobTitle" placeholder="Job Title" />
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="jobDescription" class="col-sm-3 control-label">Job Description</label>
                                             <div class="col-sm-9">
-                                                <textarea class="form-control" id="jobDescription" placeholder="Job Description" rows="5" maxlength="200" onkeyup="countChar(this)"></textarea>
+                                                <textarea class="form-control" name="JobDescription" id="jobDescription" placeholder="Job Description" rows="5" maxlength="200" onkeyup="countChar(this)"></textarea>
                                                 <div><label id="charNum">0</label>/200</div>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="jobLocation" class="col-sm-3 control-label">Location</label>
                                             <div class="col-sm-9">
-                                                <input type="text" class="form-control" id="jobLocation" placeholder="Location" />
+                                                <input type="text" name="JobLocation" class="form-control" id="jobLocation" placeholder="Location" />
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="jobSalary" class="col-sm-3 control-label">Salary</label>
                                             <div class="col-sm-9">
-                                                <input type="number" class="form-control" id="jobSalary" placeholder="Salary" />
+                                                <input type="number" class="form-control" id="jobSalary"  name="JobSalary" placeholder="Salary" />
                                                 <label class="control controlCheckbox negotiable">
                                                     <input type="checkbox" />Negotiable
                                                     <div class="controlIndicator"></div>
@@ -162,13 +162,13 @@
                                         <div class="form-group">
                                             <label for="openDate" class="col-sm-3 control-label">Opening Date</label>
                                             <div class="col-sm-9">
-                                                <input type="date" class="form-control" id="openDate" placeholder="Opening Date" />
+                                                <input type="date" class="form-control" id="openDate"  name="OpenDate" placeholder="Opening Date" />
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <label for="closeDate" class="col-sm-3 control-label">Closing Date</label>
                                             <div class="col-sm-9">
-                                                <input type="date" class="form-control" id="closeDate" placeholder="Closing Date" />
+                                                <input type="date" class="form-control" id="closeDate" name="CloseDate" placeholder="Closing Date" />
                                             </div>
                                         </div>
                                         <div class="form-group">
