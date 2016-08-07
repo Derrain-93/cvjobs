@@ -18,9 +18,34 @@ class Login extends CI_Controller {
         $this->load->view('Login');
         $this->load->view('Footer');
     }
-    public function authenticate()
-    {
-        
+
+    public function authenticate() {
+        $UserName = $this->input->post('email');
+        $Pw = $this->input->post('pwd');
+
+
+        $this->load->model('User');
+        $user = $this->User->login($UserName, $Pw);
+        if (!$user) {
+            $data = array(
+                'error' => 'Login Error'
+            );
+              $this->load->helper(array('form', 'url'));
+            $this->load->view('Header');
+            $this->load->view('Login', $data);
+            $this->load->view('Footer');
+        } else {
+
+            $data = array(
+                'error' => ''
+            );
+            
+            $this->session->set_userdata('email', $user['username']);
+            $this->load->helper(array('form', 'url'));
+            $this->load->view('Header');
+            $this->load->view('index');
+            $this->load->view('Footer');
+        }
     }
 
 }
