@@ -24,8 +24,7 @@ class JobsController extends CI_Controller {
         
         
         $this->load->model('Job');
-        $this->Job->addJob($CompanyName,$CompanyEmail,$JobTitle,$JobDescription,$JobLocation,$JobLocation,$JobSalary,$JobSalary,$CloseDate,$OpenDate);
-            
+        $this->Job->addJob($CompanyName,$CompanyEmail,$JobTitle,$JobDescription,$JobLocation,$JobLocation,$JobSalary,$JobSalary,$CloseDate,$OpenDate);            
         $this->load->helper('form');
         $this->load->view('Header');
         $this->load->view('PostJobs');
