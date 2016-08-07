@@ -1,0 +1,70 @@
+.controlGroup {
+	display: inline-block;
+	margin-top: 10px;
+	text-align: left;
+	vertical-align: top;
+}
+.control {
+	color: #fff;
+	font-size: 12px;
+	position: relative;
+	display: block;
+	margin-bottom: 15px;
+	padding-left: 30px;
+	cursor: pointer;
+	padding-top: 5px;
+}
+
+.control input {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+}
+
+.controlIndicator {
+	position: absolute;
+	top: 2px;
+	left: 0;
+	width: 20px;
+	height: 20px;
+	background: transparent;
+	border: 1px solid #c0c0c0;
+	border-bottom-right-radius: 2px;
+	border-bottom-left-radius: 2px;
+	border-top-right-radius: 2px;
+	border-top-left-radius: 2px;
+	transition: 0.4s ease all;
+}
+
+/* Checked state */
+.control input:checked ~ .controlIndicator {
+	background: #c0c0c0;
+	border-color: #c0c0c0;
+	border-bottom-right-radius: 2px;
+	border-bottom-left-radius: 2px;
+	border-top-right-radius: 2px;
+	border-top-left-radius: 2px;
+}
+
+/* Check mark */
+.controlIndicator:after {
+	position: absolute;
+	display: none;
+	content: '';
+}
+
+/* Show check mark */
+.control input:checked ~ .controlIndicator:after {
+	display: block;
+}
+
+/* Checkbox tick */
+.controlCheckbox .controlIndicator:after {
+	top: 2px;
+	left: 7px;
+	width: 5px;
+	height: 12px;
+	transform: rotate(45deg);
+	border: solid #000;
+	border-width: 0 2px 2px 0;
+}
