@@ -148,15 +148,15 @@
 						<div class="home-carousel-bg">
 							<div class="home-carousel-wrapper">
 								<div class="owl-carousel">
-									<div><a href="https://www.abansgroup.com/careers" target="_blank"><img src="Assets/img/Company Logos/Abans.png" alt="" style="margin-left:5px"></a></div>
-									<div><a href="http://www.brandixi3.com/careers/" target="_blank"><img src="Assets/img/Company Logos/Brandix.png" alt="" style="margin-left:5px"></a></div>
-									<div><a href="http://www.hemas.com/careers" target="_blank"><img src="Assets/img/Company Logos/Hemas.png" alt="" style="margin-left:5px"></a></div>
-									<div><a href="http://www.ifsworld.com/lk/company/careers/job-opportunities/" target="_blank"><img src="Assets/img/Company Logos/IFS.png" alt="" style="margin-left:5px"></a></div>
-									<div><a href="http://careers.masholdings.com/" target="_blank"><img src="Assets/img/Company Logos/MAS.png" alt="" style="margin-left:5px"></a></div>
-									<div><a href="http://www.millenniumit.com/join-us" target="_blank"><img src="Assets/img/Company Logos/MIT.png" alt="" style="margin-left:5px"></a></div>
-									<div><a href="http://www.softlogic.lk/careers-8.html" target="_blank"><img src="Assets/img/Company Logos/Softlogic.png" alt="" style="margin-left:5px"></a></div>
-									<div><a href="http://www.virtusa.com/careers/" target="_blank"><img src="Assets/img/Company Logos/virtusa.png" alt="" style="margin-left:5px"></a></div>
-									<div><a href="http://wso2.com/careers/apply/" target="_blank"><img src="Assets/img/Company Logos/WSO2.png" alt="" style="margin-left:5px"></a></div>
+									<div><a href="https://www.abansgroup.com/careers" target="_blank"><img src="<?php echo base_url('Assets/img/Company Logos/Abans.png') ?>" alt="" style="margin-left:5px"></a></div>
+									<div><a href="http://www.brandixi3.com/careers/" target="_blank"><img src="<?php echo base_url('Assets/img/Company Logos/Brandix.png') ?>" alt="" style="margin-left:5px"></a></div>
+									<div><a href="http://www.hemas.com/careers" target="_blank"><img src="<?php echo base_url('Assets/img/Company Logos/Hemas.png') ?>" alt="" style="margin-left:5px"></a></div>
+									<div><a href="http://www.ifsworld.com/lk/company/careers/job-opportunities/" target="_blank"><img src="Assets/img/Company Logos/IFS.png') ?>" alt="" style="margin-left:5px"></a></div>
+									<div><a href="http://careers.masholdings.com/" target="_blank"><img src="<?php echo base_url('Assets/img/Company Logos/MAS.png') ?>" alt="" style="margin-left:5px"></a></div>
+									<div><a href="http://www.millenniumit.com/join-us" target="_blank"><img src="<?php echo base_url('Assets/img/Company Logos/MIT.png') ?>" alt="" style="margin-left:5px"></a></div>
+									<div><a href="http://www.softlogic.lk/careers-8.html" target="_blank"><img src="<?php echo base_url('Assets/img/Company Logos/Softlogic.png') ?>" alt="" style="margin-left:5px"></a></div>
+									<div><a href="http://www.virtusa.com/careers/" target="_blank"><img src="<?php echo base_url('Assets/img/Company Logos/virtusa.png') ?>" alt="" style="margin-left:5px"></a></div>
+									<div><a href="http://wso2.com/careers/apply/" target="_blank"><img src="<?php echo base_url('Assets/img/Company Logos/WSO2.png') ?>" alt="" style="margin-left:5px"></a></div>
 								</div>
 							</div>
 						</div>
