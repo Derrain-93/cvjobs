@@ -28,11 +28,10 @@ body {
 	padding-right: 0%;
 }
 .navbar-default {
-	background-color: #042376; /* For browsers that do not support gradients */
-    background-color: -webkit-linear-gradient(#1048b2, #042376); /* For Safari 5.1 to 6.0 */
-    background-color: -o-linear-gradient(#1048b2, #042376); /* For Opera 11.1 to 12.0 */
-    background-color: -moz-linear-gradient(#1048b2, #042376); /* For Firefox 3.6 to 15 */
-    background-color: linear-gradient(#1048b2, #042376); /* Standard syntax */
+    background: -webkit-linear-gradient(#1048b2, #042376); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#1048b2, #042376); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#1048b2, #042376); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#1048b2, #042376); /* Standard syntax */
 	position: relative;
 	padding: 3% 0%;
 }
@@ -516,11 +515,10 @@ textarea {
 
 /* footer styles */
 .footer-bg {
-    background-color: #022074; /* For browsers that do not support gradients */
-    background-color: -webkit-linear-gradient(#0f4aB8, #022074); /* For Safari 5.1 to 6.0 */
-    background-color: -o-linear-gradient(#0f4aB8, #022074); /* For Opera 11.1 to 12.0 */
-    background-color: -moz-linear-gradient(#0f4aB8, #022074); /* For Firefox 3.6 to 15 */
-    background-color: linear-gradient(#0f4aB8, #022074); /* Standard syntax */
+    background: -webkit-linear-gradient(#0f4aB8, #022074); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#0f4aB8, #022074); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#0f4aB8, #022074); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#0f4aB8, #022074); /* Standard syntax */
 	color: #fff;
 	width: 100%;
 	float: left;
