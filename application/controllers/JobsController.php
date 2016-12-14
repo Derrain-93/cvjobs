@@ -50,6 +50,25 @@ class JobsController extends CI_Controller {
         $this->load->view('PostJobs');
         $this->load->view('Footer');        
     }
+    
+     
+   public function loadHome()
+   {
+       
+       $user['username']="unRegUser";
+       $this->session->set_userdata('email', $user['username']);
+       $this->load->helper(array('form', 'url'));
+       $this->load->view('Header');
+       $this->load->view('index');
+       $this->load->view('Footer');
+   }
    
+   public function loadContactUs()
+   {
+       $this->load->helper(array('form', 'url'));
+       $this->load->view('Header');
+       $this->load->view('ContactUs');
+       $this->load->view('Footer');
+   }
 
 }

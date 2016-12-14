@@ -51,13 +51,13 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav navbar-left">
 						<li>
-							<a href="#">Jobs</a>
+							<a href="<?php echo base_url('index.php/JobsController/loadHome') ?>">Jobs</a>
 						</li>
 						<li>
 							<a href="#">CV/Career Advise</a>
 						</li>
 						<li>
-							<a href="#">Contact Us</a>
+							<a href="<?php echo base_url('index.php/JobsController/loadContactUs') ?>">Contact Us</a>
 						</li>
 						<li>
 							<a href="#">Recruiter Area</a>
@@ -78,7 +78,7 @@
 							<a href="<?php echo base_url('index.php/JobsController') ?>">Post a Job</a>
 						</li>
 						<li>
-							<a href="#">Sign In</a>
+							<a href="<?php echo base_url('index.php/Login/authenticate') ?>">Sign In</a>
 						</li>
 						<li>
 							<a href="#">Register</a>
