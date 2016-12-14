@@ -10,17 +10,24 @@ class Job extends CI_Model {
 
         
     }
-     function GetMaxJobtId()
-		{
-			//$query6 = "SELECT MAX(postId) FROM posts";
-			//$this->db->query($query6);
-			$this->db->select_max('id');
-			$query=$this->db->get('jobs');
-                        $result = $query->row();
-                        return $result->id;
+    function GetMaxJobtId()
+    {
+	
+        $this->db->select_max('id');
+	$query=$this->db->get('jobs');
+        $result = $query->row();
+        return $result->id;
                         
                         
 			//return $query->result_array();
-		}
+    }
+    function getAllJobs()
+    {
+        $this->db->select()->from('jobs');
+        $query=$this->db->get();
+        return $query->result_array();
+    }
+                
+                
 
 }

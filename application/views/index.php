@@ -1,4 +1,23 @@
-        <!-- Page Content -->
+
+<?php
+				if(isset($Jobs))
+				{
+					echo "There are no Jobs.";
+				}
+                                else
+                                {
+                                    foreach($Jobs as $row)
+                                    {
+                                       echo $row['companyName'];
+                                       
+                                    }
+                                    
+                                }
+?>
+
+
+
+<!-- Page Content -->
 		<div class="container-fluid">
 			<div class="content">
 				<div class="row-fluid">

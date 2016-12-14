@@ -58,8 +58,14 @@ class JobsController extends CI_Controller {
        $user['username']="unRegUser";
        $this->session->set_userdata('email', $user['username']);
        $this->load->helper(array('form', 'url'));
-       $this->load->view('Header');
-       $this->load->view('index');
+//       $this->load->view('Header');
+//       $this->load->view('index');
+//       $this->load->view('Footer');
+       
+       $this->load->model('Job');
+       $data['Jobs']=$this->Job->getAllJobs();
+       $this->load->view('header');
+        $this->load->view('index',$data);
        $this->load->view('Footer');
    }
    
@@ -68,6 +74,21 @@ class JobsController extends CI_Controller {
        $this->load->helper(array('form', 'url'));
        $this->load->view('Header');
        $this->load->view('ContactUs');
+       $this->load->view('Footer');
+   }
+   public function loadSingleJob()
+   {
+       $this->load->helper(array('form', 'url'));
+       $this->load->view('Header');
+       $this->load->view('CompleteJobDetail');
+       $this->load->view('Footer');
+   }
+   public function loadAllJobs()
+   {
+       $this->load->model('Job');
+       $data['Jobs']=$this->Job->getAllJobs();
+       $this->load->view('header');
+        $this->load->view('index',$data);
        $this->load->view('Footer');
    }
 
