@@ -23,8 +23,8 @@ class Job extends CI_Model {
     }
     function getAllJobs()
     {
-        $this->db->select()->from('jobs');
-        $query=$this->db->get();
+        //$this->db->select()->from('jobs');
+        $query=$this->db->get('jobs');
         return $query->result_array();
     }
                 

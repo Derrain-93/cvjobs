@@ -9,6 +9,8 @@ class Welcome extends CI_Controller {
                 'error' => ''
             );
         $this->load->helper(array('form', 'url'));
+       $this->load->model('Job');
+       $data['Jobs']=$this->Job->getAllJobs();
         $this->load->view('Header');
         $this->load->view('index',$data);
         $this->load->view('Footer');

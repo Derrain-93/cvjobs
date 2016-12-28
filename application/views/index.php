@@ -1,22 +1,3 @@
-
-<?php
-				if(isset($Jobs))
-				{
-					echo "There are no Jobs.";
-				}
-                                else
-                                {
-                                    foreach($Jobs as $row)
-                                    {
-                                       echo $row['companyName'];
-                                       
-                                    }
-                                    
-                                }
-?>
-
-
-
 <!-- Page Content -->
 		<div class="container-fluid">
 			<div class="content">
@@ -190,6 +171,47 @@
 									<div class="home-recommended-jobs-title">
 										<h4>Recommended Jobs (50)</h4>
 									</div>
+                                    
+                                    <div class="searched-job-bg">
+                                        <div class="row-fluid">
+                                            <div class="col-lg-12">
+                                                <?php
+                                                    if(!isset($Jobs))
+                                                    {
+                                                        echo "There are no Jobs.";
+                                                        $message = "wrong answer";
+                                                        echo "<script type='text/javascript'>alert('$message');</script>";
+                                                       
+                                                    }
+                                                    else
+                                                    { ?>
+                                                        <table class="table table-bordered">
+                                                            <?php foreach($Jobs as $row)
+                                                            { ?>
+                                                                <tr>
+                                                                    <td class="searched-job-number-list">
+                                                                        <span><?php echo $row['id']; ?></span>
+                                                                    </td>
+                                                                    <td>
+                                                                        <span class="searched-job-post"><?php echo $row['title']; ?></span> - <span class="searched-job-company"><?php echo $row['companyName']; ?></span>
+                                                                        <br />
+                                                                        Location - <span class="searched-job-location"><?php echo $row['location']; ?></span>&emsp;Salary - <span class="searched-job-salary"><?php echo $row['salary']; ?> Negotiable</span>&emsp;Posted - <span class="searched-job-posted-date"><?php echo $row['openDate']; ?></span>
+                                                                        <br />
+                                                                        <span class="searched-job-description"><?php echo $row['description']; ?></span>
+                                                                        <br />
+                                                                        <a class="searched-job-view-details" onclick="newWindow()">View Details</a><span class="pull-right"><a class="searched-job-save">Save <i class="glyphicon glyphicon-star"></i></a></span>
+                                                                    </td>
+                                                                </tr>
+                                                           <?php  }
+                                                           ?>
+                                                        </table>
+                                                    <?php
+                                                    
+                                                    }
+                                                ?>
+                                            </div>
+                                        </div>
+                                    </div>
 								</div>
 								
 								<div class="row">
@@ -282,4 +304,4 @@
 				</div>
 			</div>
 		</div>
-		<!-- /.container -->
+<!--		 /.container -->
