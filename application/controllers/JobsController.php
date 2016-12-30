@@ -74,6 +74,7 @@ class JobsController extends CI_Controller {
        
        $this->load->model('Job');
        $data['Jobs']=$this->Job->getAllJobs();
+       $data['JobTypes']=$this->Job->getAllJobTypes();   
        $this->load->view('header');
         $this->load->view('index',$data);
        $this->load->view('Footer');
