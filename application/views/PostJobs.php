@@ -67,7 +67,7 @@
                                             </div>
                                         </div>
                                         <div class="form-group">
-                                            <label for="jobTitle" class="col-sm-3 control-label">Job Title</label>
+                                            <label for="jobTitle" class="col-sm-3 control-label">Jobs Title</label>
                                             <div class="col-sm-9">
                                                 <input type="text" name="JobTitle" class="form-control" id="jobTitle" placeholder="Job Title" />
                                             </div>
