@@ -354,33 +354,34 @@ textarea {
     position: relative;
     padding: 3px;
 }
-.searched-job-wrapper .searched-job-bg .table tr td {
+.searched-job-bg .table tr td {
     border: 1px solid #0f066f;
     font-size: 1.5rem;
     line-height: 1.75;
 }
-.searched-job-wrapper .searched-job-bg .table tr .searched-job-number-list {
+.searched-job-bg .table tr .searched-job-number-list {
     background-color: #08840c;
     color: #fff;
     font-family: JosefinBold;
 }
-.searched-job-wrapper .searched-job-bg .table tr td .searched-job-post {
+.searched-job-bg .table tr td .searched-job-post {
     font-family: JosefinBold;
+    font-size: 2.5rem;
 }
-.searched-job-wrapper .searched-job-bg .table tr td .searched-job-view-details {
+.searched-job-bg .table tr td .searched-job-view-details {
     border: 1px solid #08840c;
     cursor: pointer;
     position: relative;
     padding: 3px;
     text-decoration: none;
 }
-.searched-job-wrapper .searched-job-bg .table tr td .searched-job-save {
+.searched-job-bg .table tr td .searched-job-save {
     color: #000;
     font-family: JosefinBold;
     cursor: pointer;
     text-decoration: none;
 }
-.searched-job-wrapper .searched-job-bg .table tr td .searched-job-save i {
+.searched-job-bg .table tr td .searched-job-save i {
     color: #08840c;
 }
 
