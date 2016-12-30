@@ -15,6 +15,7 @@ class Welcome extends CI_Controller {
         $this->load->helper(array('form', 'url'));
         $this->load->model('Job');
         $data['Jobs']=$this->Job->getAllJobs();
+        $data['JobTypes']=$this->Job->getAllJobTypes();       
         $this->load->view('Header');
         $this->load->view('index',$data);
         $this->load->view('Footer');
