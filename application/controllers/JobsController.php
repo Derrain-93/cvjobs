@@ -51,12 +51,22 @@ class JobsController extends CI_Controller {
         $this->load->view('Footer');        
     }
     
+   
+    
      
    public function loadHome()
    {
+       if(!$_SESSION['username'])
+       {
+            $user['username']="unRegUser";
+            $this->session->set_userdata('username', $user['username']);
+       }
+       else           
+       {
+           
+       }
        
-       $user['username']="unRegUser";
-       $this->session->set_userdata('email', $user['username']);
+  
        $this->load->helper(array('form', 'url'));
 //       $this->load->view('Header');
 //       $this->load->view('index');

@@ -75,7 +75,7 @@
 							<a href="#">Saved Jobs</a>
 						</li>
                         <li>
-							<a href="<?php echo base_url('index.php/JobsController') ?>">Post a Job</a>
+							<a href="<?php echo base_url('index.php/Login/checkIsLogged') ?>">Post a Job</a>
 						</li>
 						<li>
 							<a href="<?php echo base_url('index.php/Login/authenticate') ?>">Sign In</a>

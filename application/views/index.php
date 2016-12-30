@@ -169,7 +169,7 @@
 							<div class="home-recommended-jobs-wrapper">
 								<div class="row-fluid">
 									<div class="home-recommended-jobs-title">
-										<h4>Recommended Jobs (50)</h4>
+										<h4>All Jobs (<?php echo count($Jobs); ?>)</h4>
 									</div>
                                     
                                     <div class="searched-job-bg">
@@ -179,15 +179,17 @@
                                                     if(!isset($Jobs))
                                                     {
                                                         echo "There are no Jobs.";
-                                                        $message = "wrong answer";
-                                                        echo "<script type='text/javascript'>alert('$message');</script>";
+                                                        //$message = "wrong answer";
+                                                       // echo "<script type='text/javascript'>alert('$message');</script>";
                                                        
                                                     }
                                                     else
                                                     { ?>
                                                         <table class="table table-bordered">
                                                             <?php foreach($Jobs as $row)
-                                                            { ?>
+                                                            { 
+                                                                
+                                                                ?>
                                                                 <tr>
                                                                     <td class="searched-job-number-list">
                                                                         <span><?php echo $row['id']; ?></span>

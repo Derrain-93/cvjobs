@@ -40,11 +40,34 @@ class Login extends CI_Controller {
                 'error' => ''
             );
             
-            $this->session->set_userdata('email', $user['username']);
+            $this->session->set_userdata('username', $user['username']);
             $this->load->helper(array('form', 'url'));
+            $this->load->model('Job');
+            $data['Jobs']=$this->Job->getAllJobs();
             $this->load->view('Header');
-            $this->load->view('index');
+            $this->load->view('index',$data);
             $this->load->view('Footer');
+        }
+    }
+    
+     public function checkIsLogged()
+    {
+        if($_SESSION['username'] =="unRegUser")
+        {     
+            $data = array(
+                'error' => 'Please Login'
+            );
+                      
+            $this->load->view('Header');
+            $this->load->view('Login',$data);
+            $this->load->view('Footer');
+        
+        }
+        else
+        {
+            $this->load->view('Header');
+            $this->load->view('PostJobs');
+            $this->load->view('Footer');         
         }
     }
 
