@@ -368,8 +368,9 @@ textarea {
     font-family: JosefinBold;
 }
 .searched-job-bg .table tr td .searched-job-post {
+    color: #3026ff;
     font-family: JosefinBold;
-    font-size: 2.5rem;
+    font-size: 1.75rem;
 }
 .searched-job-bg .table tr td .searched-job-view-details {
     border: 1px solid #08840c;
