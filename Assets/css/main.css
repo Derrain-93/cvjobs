@@ -43,14 +43,14 @@ a, button {
 }
 .navbar-default .navbar-header > .navbar-brand {
 	font-size: 5rem;
-	font-family: JosefinBold;
+	/*font-family: JosefinBold;*/
 	color: #fff;
 	float: left;
 	transition: 0.4s ease all;
 }
 .navbar-default .navbar-collapse > .navbar-nav {
 	font-size: 2rem;
-	font-family: JosefinReg;
+	/*font-family: JosefinReg;*/
     background-color: #0e52be;
 	color: #fff;
 	width: 100%;
@@ -61,11 +61,12 @@ a, button {
 }
 .navbar-default .navbar-collapse > .navbar-nav > li > a {
 	color: #fff;
+    font-family: Calibri;
 	text-decoration: none;
 	transition: 0.4s ease all;
 }
 .navbar-default .navbar-collapse > .navbar-nav > li > a:hover, .navbar-default .navbar-collapse > .navbar-nav > li > a:focus, .navbar-default .navbar-collapse > .navbar-nav > li > a:active {
-	color: #000;
+	color: #ccc;
 }
 .navbar-default .navbar-collapse > .navbar-nav > li > a > button {
 	background: transparent;
@@ -75,6 +76,7 @@ a, button {
 }
 .navbar-default .navbar-collapse > .navbar-nav > li > span {
 	color: #fff;
+    font-family: Calibri;
 	position: relative;
 	top: 10px;
 }
@@ -110,6 +112,7 @@ a, button {
 .search-btn {
 	background-color: #08840c;
 	color: #fff;
+    font-family: Calibri;
 	border-color: #ffffff;
 	transition: 0.4s ease all;
 }
@@ -187,6 +190,24 @@ a, button, .btn {
 textarea {
     resize: none;
 }
+.img-cell {
+    width: 10%;
+    vertical-align: middle;
+}
+table { 
+  width: 100%; 
+  border-collapse: collapse; 
+}
+th { 
+  background: #333; 
+  color: white; 
+  font-weight: bold; 
+}
+td, th { 
+  padding: 6px; 
+  border: 1px solid #ccc; 
+  text-align: left; 
+}
 
 
 /* content styles */
@@ -218,6 +239,7 @@ textarea {
 	transition: 0.4s ease all;
 }
 .home-search-bg > .home-search-wrapper .form-control {
+    font-family: Calibri;
 	width: 25rem;
 	transition: 0.4s ease all;
 }
@@ -235,20 +257,24 @@ textarea {
 }
 .home-urgent-opening-bg > .home-urgent-opening-wrapper h4 {
 	color: #0f066f;
-	font-family: JosefinReg;
+	/*font-family: JosefinReg;*/
+    font-family: Calibri;
 	text-align: center;
 }
 .home-job-categories-bg {
 	border: 2px solid #0f066f;
+    min-height: 263px;
 	position: relative;
 	padding: 1% 2%;
+    overflow-y: auto;
 	transition: 0.4s ease all;
 }
 .home-job-categories-bg > .home-job-categories-wrapper {
 	width: 100%;
 }
 .home-job-categories-bg > .home-job-categories-wrapper li {
-	font-family: JosefinBold;
+	/*font-family: JosefinBold;*/
+    font-family: Cambria;
 	list-style: none;
 	position: relative;
 	margin: 10px auto !important;
@@ -272,6 +298,7 @@ textarea {
 .home-recommended-jobs-bg > .home-recommended-jobs-wrapper .home-recommended-jobs-title > h4 {
 	background-color: #3026ff;
 	color: #fff;
+    font-family: Calibri;
 	position: relative;
 	padding: 5px 0px 5px 10px;
 }
@@ -316,6 +343,7 @@ textarea {
 
 /* search jobs styles */
 .searched-job-categories-bg {
+    font-family: Cambria;
     background-color: #08840c;
     border: 2px solid #0f066f;
 	position: relative;
@@ -341,15 +369,18 @@ textarea {
     margin: 1% auto;
 }
 .searched-job-wrapper .searched-job-title {
+    font-family: Calibri;
+    font-weight: bold;
     font-size: 1.5rem;
-    font-family: JosefinBold;
+    /*font-family: JosefinBold;*/
     line-height: 1.75;
 }
 .searched-job-wrapper .searched-job-title > .searched-job-category {
     background-color: #0f066f;
     color: #fff;
     font-size: 1.5rem;
-    font-family: JosefinBold;
+    font-weight: 500;
+    /*font-family: JosefinBold;*/
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 5px;
@@ -359,17 +390,26 @@ textarea {
 }
 .searched-job-bg .table tr td {
     border: 1px solid #0f066f;
+    font-family: Calibri;
     font-size: 1.5rem;
     line-height: 1.75;
+}
+.searched-job-bg .table tr td .img-holder {
+    width: 125px;
+    height: auto;
+    border: 1px solid #0f066f;
 }
 .searched-job-bg .table tr .searched-job-number-list {
     background-color: #08840c;
     color: #fff;
-    font-family: JosefinBold;
+    font-family: Calibri;
+    font-weight: bold;
+    /*font-family: JosefinBold;*/
 }
 .searched-job-bg .table tr td .searched-job-post {
     color: #3026ff;
-    font-family: JosefinBold;
+    /*font-family: JosefinBold;*/
+    font-weight: bold;
     font-size: 1.75rem;
 }
 .searched-job-bg .table tr td .searched-job-view-details {
@@ -391,6 +431,7 @@ textarea {
 
 /* view job details page styles */
 .view-job-details-post-bg {
+    font-family: Calibri;
     background-color: #08840c;
     color: #fff;
     width: 100%;
@@ -420,6 +461,7 @@ textarea {
     height: 100%;
 }
 .view-job-apply-bg {
+    font-family: Calibri;
     border: 2px solid #0f066f;
     width: 100%;
     float: left;
@@ -439,6 +481,7 @@ textarea {
 /* contact page styles */
 .contact-search-bg {
 	background-color: #0f066f;
+    font-family: Calibri;
 	width: 100%;
 	position: relative;
 	padding: 1%;
@@ -460,22 +503,27 @@ textarea {
 }
 .contact-advert-bg > .contact-advert-wrapper h4 {
 	color: #fff;
+    font-family: Calibri;
 	font-size: 2.5rem;
 	text-align: center;
 	transition: 0.4s ease all;
 }
 .contact-message-title {
     color: #0f066f;
+    font-family: Calibri;
     font-size: 2.5rem;
-    font-family: JosefinBold;
+    font-weight: bold;
+    /*font-family: JosefinBold;*/
 }
 .contact-message-title > span {
     color: #000;
     font-size: 1.5rem;
+    font-weight: 500;
     position: relative;
     margin-left: 5%;
 }
 .contact-message-bg {
+    font-family: Calibri;
     border: 2px solid #0f066f;
 	min-height: 100%;
 	max-height: 100%;
@@ -529,6 +577,7 @@ textarea {
 	float: left;
 }
 .footer-bg > footer {
+    font-family: Calibri;
 	width: 100%;
     margin: 5px 0;
 	float: left;
@@ -537,7 +586,8 @@ textarea {
     margin: 5px 0;
 }
 .footer-bg > footer h4 {
-    font-family: JosefinBold;
+    /*font-family: JosefinBold;*/
+    font-weight: bold;
 	position: relative;
 	margin-bottom: 35px;
 }
@@ -624,6 +674,40 @@ textarea {
     .contact-side-advert-bg > .contact-side-advert-wrapper > .contact-side-advert-block img {
         width: 100%;
     }
+}
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+    .img-cell {
+        width: 100%;
+    }
+	table, thead, tbody, th, td, tr { 
+		display: block; 
+	}
+	thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	tr {
+        border: 1px solid #ccc;
+    }
+	
+	td {
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td:before {
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
 }
 @media (max-width: 640px) {
     .navbar-default .navbar-header > .navbar-brand {

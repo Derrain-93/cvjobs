@@ -20,14 +20,14 @@
                                     <input type="password" class="form-control" id="pwd" name="pwd" placeholder="Enter password">
                                 </div>
                             </div>
-                            <div class="form-group"> 
+                            <!--<div class="form-group"> 
                                 <div class="col-sm-offset-2 col-sm-10">
                                     <label class="control controlCheckbox">
                                         <input type="checkbox" />Remember me
                                         <div class="controlIndicator"></div>
                                     </label>
                                 </div>
-                            </div>
+                            </div>-->
                             <div class="form-group"> 
                                 <div class="col-sm-offset-2 col-sm-10">
                                     <button type="submit" class="btn btn-default send-btn">Submit</button>

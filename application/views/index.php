@@ -65,7 +65,6 @@ if (!isset($JobTypes)) {
     //echo "<script type='text/javascript'>alert('$message');</script>";
 } else {
     ?>
-  <div class="row">
         <?php 
         foreach ($JobTypes as $row) {
             ?>
@@ -77,7 +76,6 @@ if (!isset($JobTypes)) {
 
             <?php
         } ?>
-      </div>  
 <?php
 }
 ?>
@@ -180,7 +178,7 @@ if (!isset($JobTypes)) {
                             <div><a href="https://www.abansgroup.com/careers" target="_blank"><img src="<?php echo base_url('Assets/img/Company Logos/Abans.png') ?>" alt="" style="margin-left:5px"></a></div>
                             <div><a href="http://www.brandixi3.com/careers/" target="_blank"><img src="<?php echo base_url('Assets/img/Company Logos/Brandix.png') ?>" alt="" style="margin-left:5px"></a></div>
                             <div><a href="http://www.hemas.com/careers" target="_blank"><img src="<?php echo base_url('Assets/img/Company Logos/Hemas.png') ?>" alt="" style="margin-left:5px"></a></div>
-                            <div><a href="http://www.ifsworld.com/lk/company/careers/job-opportunities/" target="_blank"><img src="Assets/img/Company Logos/IFS.png') ?>" alt="" style="margin-left:5px"></a></div>
+                            <div><a href="http://www.ifsworld.com/lk/company/careers/job-opportunities/" target="_blank"><img src="<?php echo base_url('Assets/img/Company Logos/IFS.png') ?>" alt="" style="margin-left:5px"></a></div>
                             <div><a href="http://careers.masholdings.com/" target="_blank"><img src="<?php echo base_url('Assets/img/Company Logos/MAS.png') ?>" alt="" style="margin-left:5px"></a></div>
                             <div><a href="http://www.millenniumit.com/join-us" target="_blank"><img src="<?php echo base_url('Assets/img/Company Logos/MIT.png') ?>" alt="" style="margin-left:5px"></a></div>
                             <div><a href="http://www.softlogic.lk/careers-8.html" target="_blank"><img src="<?php echo base_url('Assets/img/Company Logos/Softlogic.png') ?>" alt="" style="margin-left:5px"></a></div>
@@ -219,7 +217,12 @@ if (!isset($Jobs)) {
                                                         <td class="searched-job-number-list">
                                                             <span><?php echo $row['id']; ?></span>
                                                         </td>
-                                                        <td>
+                                                        <td class="img-cell">
+                                                            <div class="img-holder">
+                                                                <img src="<?php echo base_url('Assets/img/Defaults/defaultUser.png') ?>" />
+                                                            </div>
+                                                        </td>
+                                                        <td>        
                                                             <span class="searched-job-post"><?php echo $row['title']; ?></span> - <span class="searched-job-company"><?php echo $row['companyName']; ?></span>
                                                             <br />
                                                             Location - <span class="searched-job-location"><?php echo $row['location']; ?></span>&emsp;Salary - <span class="searched-job-salary"><?php echo $row['salary']; ?> Negotiable</span>&emsp;Posted - <span class="searched-job-posted-date"><?php echo $row['openDate']; ?></span>

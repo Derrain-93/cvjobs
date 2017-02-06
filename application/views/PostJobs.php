@@ -137,7 +137,7 @@
                     <div class="post-job-image-preview-bg">
                         <div class="post-job-image-preview-wrapper">
                             <div class="row-fluid post-job-image-preview-block">
-                                <img id="preview" src="<?php echo base_url('Assets/img/defaultPreview.png') ?>" />
+                                <img id="preview" src="<?php echo base_url('Assets/img/Defaults/defaultPreview.png') ?>" />
                             </div>
                         </div>
                     </div>
