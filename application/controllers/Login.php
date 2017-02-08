@@ -66,10 +66,20 @@ class Login extends CI_Controller {
         }
         else
         {
+            $this->load->model('Job');
+            $data['Jobs']=$this->Job->getAllJobs();
+            $data['JobTypesForPosting']=$this->Job->getAllJobTypes();              
             $this->load->view('Header');
-            $this->load->view('PostJobs');
+            $this->load->view('PostJobs',$data);
             $this->load->view('Footer');         
         }
+    }
+    
+    public function Register()
+    {
+         $this->load->view('Header');
+         $this->load->view('Register');
+         $this->load->view('Footer');
     }
 
 }

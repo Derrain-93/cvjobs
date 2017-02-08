@@ -1,8 +1,4 @@
 <!-- Page Content -->
-
-
-
-
 <div class="container-fluid">
     <div class="content">
         <div class="row-fluid">
@@ -59,28 +55,27 @@
                 <div class="home-job-categories-bg">
                     <div class="home-job-categories-wrapper">
                         <?php
-if (!isset($JobTypes)) {
-    echo "No Job Types";
-    //$message = "No Job Types";
-    //echo "<script type='text/javascript'>alert('$message');</script>";
-} else {
-    ?>
-        <?php 
-        foreach ($JobTypes as $row) {
-            ?>
+                        if (!isset($JobTypes)) {
+                            echo "No Job Types";
+                            //$message = "No Job Types";
+                            //echo "<script type='text/javascript'>alert('$message');</script>";
+                        } else {
+                            ?>
+                            <?php
+                            foreach ($JobTypes as $row) {
+                                ?>
+                                <div class="col-lg-3">
+                                    <li><a href="#"><?php echo $row['Type']; ?> (122)</a></li>
+                                </div>
 
-                <div class="col-lg-3">
-                    <li><a href="#"><?php echo $row['Type']; ?> (122)</a></li>
-                </div>
+
+                                <?php }
+                            ?>
+                            <?php
+                        }
+                        ?>
 
 
-            <?php
-        } ?>
-<?php
-}
-?>
-
-                        
                         <!--<div class="row">
                             <div class="col-lg-3">
                                 <li><a href="#">IT & Network (122)</a></li>
@@ -202,20 +197,28 @@ if (!isset($JobTypes)) {
                             <div class="searched-job-bg">
                                 <div class="row-fluid">
                                     <div class="col-lg-12">
-<?php
-if (!isset($Jobs)) {
-    echo "There are no Jobs.";
-    //$message = "wrong answer";
-    // echo "<script type='text/javascript'>alert('$message');</script>";
-} else {
-    ?>
+                                        <?php
+                                        if (!isset($Jobs)) {
+                                            echo "There are no Jobs.";
+                                            //$message = "wrong answer";
+                                            // echo "<script type='text/javascript'>alert('$message');</script>";
+                                        } else {
+                                            ?>
                                             <table class="table table-bordered">
+<<<<<<< HEAD
                                                 <tbody class="body-bordered">
                                             <?php
                                             foreach ($Jobs as $row) {
                                                 ?>
                                                     <tr class="row-bordered">
                                                         <td class="searched-job-number-list cell-bordered">
+=======
+                                                <?php
+                                                foreach ($Jobs as $row) {
+                                                    ?>
+                                                    <tr>
+                                                        <td class="searched-job-number-list">
+>>>>>>> 24d9f05b8c23521e0a2c51833b7c25cbf1f80553
                                                             <span><?php echo $row['id']; ?></span>
                                                         </td>
                                                         <td class="img-cell cell-bordered">
@@ -230,16 +233,21 @@ if (!isset($Jobs)) {
                                                             <br />
                                                             <span class="searched-job-description"><?php echo $row['description']; ?></span>
                                                             <br />
-                                                            <a class="searched-job-view-details" onclick="newWindow()">View Details</a><span class="pull-right"><a class="searched-job-save">Save <i class="glyphicon glyphicon-star"></i></a></span>
+                                                            <a class="searched-job-view-details" onclick="newWindow(<?php echo $row['id']; ?>)">View Details</a><span class="pull-right"><a class="searched-job-save">Save <i class="glyphicon glyphicon-star"></i></a></span>
                                                         </td>
                                                     </tr>
+<<<<<<< HEAD
     <?php }
     ?>
                                                 </tbody>
+=======
+                                                <?php }
+                                                ?>
+>>>>>>> 24d9f05b8c23521e0a2c51833b7c25cbf1f80553
                                             </table>
-    <?php
-}
-?>
+                                            <?php
+                                        }
+                                        ?>
                                     </div>
                                 </div>
                             </div>
@@ -335,4 +343,38 @@ if (!isset($Jobs)) {
         </div>
     </div>
 </div>
+
+<script>
+      function newWindow(id) {
+          alert(id);
+          
+          $.ajax ({
+                        url:"<?php echo site_url('JobsController/AjaxSinglePost'); ?>",
+                        //type:'POST',
+                        //data:email,
+                        type:"GET",
+                        data:{id:""+id},
+                        //dataType:"json",
+                       
+                        success:function(msg)
+                        {
+                           
+                           window.open("viewJobDetails.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=300,width=600,height=600");
+                           //$('body').html(msg);
+                           // alert(msg);
+                        }
+
+
+                    }
+
+                    );
+          
+          
+          
+          
+          
+          
+            //window.open("viewJobDetails.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=300,width=600,height=600");
+        }
+ </script>
 <!--		 /.container -->

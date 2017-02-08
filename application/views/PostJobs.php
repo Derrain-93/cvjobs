@@ -5,9 +5,13 @@
             <div class="col-lg-12">
                 <div class="contact-search-bg">
                     <div class="contact-search-wrapper">
+<<<<<<< HEAD
 
                         <?php echo form_open_multipart('JobsController/PostJob', 'class="form form-inline"'); ?>
 
+=======
+                        <?php echo form_open_multipart('JobsController/PostJob', 'class="form-inline"'); ?>
+>>>>>>> 24d9f05b8c23521e0a2c51833b7c25cbf1f80553
                         <div class="row">
                             <div class="col-lg-2">
                                 <label class="control controlCheckbox">
@@ -69,10 +73,28 @@
                                     <div class="form-group">
                                         <label for="jobCategory" class="col-sm-3 control-label">Job Category</label>
                                         <div class="col-sm-9">
-                                            <select class="form-control" id="jobCategory">
-                                                <option>IT</option>
-                                                <option>Hospitality</option>
-                                            </select>
+                                            <?php
+                                            if (!isset($JobTypesForPosting)) {
+                                                
+                                            } else {
+                                                ?>
+                                                <select class="form-control" id="jobCategory">
+                                                <?php
+                                                foreach ($JobTypesForPosting as $row) {
+                                                    ?>
+                                                        <option><?php echo $row['Type']; ?></option>
+                                                        <?php
+                                                    }
+                                                    ?>
+                                                </select>
+                                                    <?php
+                                                }
+                                                ?>
+
+<!--                                            <select class="form-control" id="jobCategory">
+    <option>IT</option>
+    <option>Hospitality</option>
+</select>-->
                                         </div>
                                     </div>
                                     <div class="form-group">
