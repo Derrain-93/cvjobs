@@ -30,9 +30,9 @@ class JobsController extends CI_Controller {
         
          $config['upload_path'] = './Assets/Uploads/';
         $config['allowed_types'] = 'gif|jpg|png';
-        $config['max_size'] = 100;
-        $config['max_width'] = 1024;
-        $config['max_height'] = 768;
+       // $config['max_size'] = 100;
+       // $config['max_width'] = 1024;
+        //$config['max_height'] = 768;
         $config['file_name'] = $maxId;
 
         $this->load->library('upload', $config);

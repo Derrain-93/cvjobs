@@ -77,12 +77,26 @@
                         <li>
 							<a href="<?php echo base_url('index.php/Login/checkIsLogged') ?>">Post a Job</a>
 						</li>
-						<li>
+                                                <?php
+                                                if($_SESSION['username']!="unRegUser")
+                                                {
+                                                    
+                                                }
+                                                else
+                                                { ?>
+                                                <li>
 							<a href="<?php echo base_url('index.php/Login/authenticate') ?>">Sign In</a>
+                                                        
 						</li>
-						<li>
-							<a href="#">Register</a>
+                                                <li>
+							<a href="<?php echo base_url('index.php/Login/Register') ?>">Register</a>
 						</li>
+                                                <?php                                       
+                                                }
+                                                ?>
+                                                
+						
+						
 					</ul>
 				</div>
 				<!-- /.navbar-collapse -->
