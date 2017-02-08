@@ -228,14 +228,9 @@
                                                             <a class="searched-job-view-details" onclick="newWindow(<?php echo $row['id']; ?>)">View Details</a><span class="pull-right"><a class="searched-job-save">Save <i class="glyphicon glyphicon-star"></i></a></span>
                                                         </td>
                                                     </tr>
-<<<<<<< HEAD
     <?php }
     ?>
                                                 </tbody>
-=======
-                                                <?php }
-                                                ?>
->>>>>>> 24d9f05b8c23521e0a2c51833b7c25cbf1f80553
                                             </table>
                                             <?php
                                         }
