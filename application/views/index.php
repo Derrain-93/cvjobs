@@ -1,8 +1,4 @@
 <!-- Page Content -->
-
-
-
-
 <div class="container-fluid">
     <div class="content">
         <div class="row-fluid">
@@ -59,28 +55,27 @@
                 <div class="home-job-categories-bg">
                     <div class="home-job-categories-wrapper">
                         <?php
-if (!isset($JobTypes)) {
-    echo "No Job Types";
-    //$message = "No Job Types";
-    //echo "<script type='text/javascript'>alert('$message');</script>";
-} else {
-    ?>
-        <?php 
-        foreach ($JobTypes as $row) {
-            ?>
+                        if (!isset($JobTypes)) {
+                            echo "No Job Types";
+                            //$message = "No Job Types";
+                            //echo "<script type='text/javascript'>alert('$message');</script>";
+                        } else {
+                            ?>
+                            <?php
+                            foreach ($JobTypes as $row) {
+                                ?>
+                                <div class="col-lg-3">
+                                    <li><a href="#"><?php echo $row['Type']; ?> (122)</a></li>
+                                </div>
 
-                <div class="col-lg-3">
-                    <li><a href="#"><?php echo $row['Type']; ?> (122)</a></li>
-                </div>
+
+                                <?php }
+                            ?>
+                            <?php
+                        }
+                        ?>
 
 
-            <?php
-        } ?>
-<?php
-}
-?>
-
-                        
                         <!--<div class="row">
                             <div class="col-lg-3">
                                 <li><a href="#">IT & Network (122)</a></li>
@@ -202,17 +197,17 @@ if (!isset($JobTypes)) {
                             <div class="searched-job-bg">
                                 <div class="row-fluid">
                                     <div class="col-lg-12">
-<?php
-if (!isset($Jobs)) {
-    echo "There are no Jobs.";
-    //$message = "wrong answer";
-    // echo "<script type='text/javascript'>alert('$message');</script>";
-} else {
-    ?>
+                                        <?php
+                                        if (!isset($Jobs)) {
+                                            echo "There are no Jobs.";
+                                            //$message = "wrong answer";
+                                            // echo "<script type='text/javascript'>alert('$message');</script>";
+                                        } else {
+                                            ?>
                                             <table class="table table-bordered">
-                                            <?php
-                                            foreach ($Jobs as $row) {
-                                                ?>
+                                                <?php
+                                                foreach ($Jobs as $row) {
+                                                    ?>
                                                     <tr>
                                                         <td class="searched-job-number-list">
                                                             <span><?php echo $row['id']; ?></span>
@@ -232,12 +227,12 @@ if (!isset($Jobs)) {
                                                             <a class="searched-job-view-details" onclick="newWindow()">View Details</a><span class="pull-right"><a class="searched-job-save">Save <i class="glyphicon glyphicon-star"></i></a></span>
                                                         </td>
                                                     </tr>
-    <?php }
-    ?>
+                                                <?php }
+                                                ?>
                                             </table>
-    <?php
-}
-?>
+                                            <?php
+                                        }
+                                        ?>
                                     </div>
                                 </div>
                             </div>
