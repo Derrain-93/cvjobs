@@ -102,5 +102,11 @@ class JobsController extends CI_Controller {
         $this->load->view('index',$data);
        $this->load->view('Footer');
    }
+   
+   public function AjaxSinglePost()
+   {
+       $id = $_GET['id'];
+       echo "Im from the Backend" ;
+   }
 
 }

@@ -5,9 +5,7 @@
             <div class="col-lg-12">
                 <div class="contact-search-bg">
                     <div class="contact-search-wrapper">
-
                         <?php echo form_open_multipart('JobsController/PostJob', 'class="form-inline"'); ?>
-
                         <div class="row">
                             <div class="col-lg-2">
                                 <label class="control controlCheckbox">

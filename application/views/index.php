@@ -224,7 +224,7 @@
                                                             <br />
                                                             <span class="searched-job-description"><?php echo $row['description']; ?></span>
                                                             <br />
-                                                            <a class="searched-job-view-details" onclick="newWindow()">View Details</a><span class="pull-right"><a class="searched-job-save">Save <i class="glyphicon glyphicon-star"></i></a></span>
+                                                            <a class="searched-job-view-details" onclick="newWindow(<?php echo $row['id']; ?>)">View Details</a><span class="pull-right"><a class="searched-job-save">Save <i class="glyphicon glyphicon-star"></i></a></span>
                                                         </td>
                                                     </tr>
                                                 <?php }
@@ -328,4 +328,38 @@
         </div>
     </div>
 </div>
+
+<script>
+      function newWindow(id) {
+          alert(id);
+          
+          $.ajax ({
+                        url:"<?php echo site_url('JobsController/AjaxSinglePost'); ?>",
+                        //type:'POST',
+                        //data:email,
+                        type:"GET",
+                        data:{id:""+id},
+                        //dataType:"json",
+                       
+                        success:function(msg)
+                        {
+                           
+                           window.open("viewJobDetails.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=300,width=600,height=600");
+                           //$('body').html(msg);
+                           // alert(msg);
+                        }
+
+
+                    }
+
+                    );
+          
+          
+          
+          
+          
+          
+            //window.open("viewJobDetails.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=300,width=600,height=600");
+        }
+ </script>
 <!--		 /.container -->
