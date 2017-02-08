@@ -6,7 +6,7 @@
                 <div class="contact-search-bg">
                     <div class="contact-search-wrapper">
 
-                        <?php echo form_open_multipart('JobsController/PostJob', 'class="form-inline"'); ?>
+                        <?php echo form_open_multipart('JobsController/PostJob', 'class="form form-inline"'); ?>
 
                         <div class="row">
                             <div class="col-lg-2">
@@ -53,7 +53,7 @@
                         <div class="contact-message-wrapper">
                             <div class="row-fluid">
                                 <span>This will send a high priority email to our sales team. We will call you back as soon as we can during normal working hours.</span>
-                                <form class="form-horizontal">
+                                <form class="form form-horizontal">
                                     <div class="form-group">
                                         <label for="contactCompany" class="col-sm-3 control-label">Company Name</label>
                                         <div class="col-sm-9">
@@ -107,13 +107,13 @@
                                     <div class="form-group">
                                         <label for="openDate" class="col-sm-3 control-label">Opening Date</label>
                                         <div class="col-sm-9">
-                                            <input type="date" class="form-control" id="openDate"  name="OpenDate" placeholder="Opening Date" />
+                                            <input type="text" class="form-control" id="openDate" name="OpenDate" placeholder="Opening Date" />
                                         </div>
                                     </div>
                                     <div class="form-group">
                                         <label for="closeDate" class="col-sm-3 control-label">Closing Date</label>
                                         <div class="col-sm-9">
-                                            <input type="date" class="form-control" id="closeDate" name="CloseDate" placeholder="Closing Date" />
+                                            <input type="text" class="form-control" id="closeDate" name="CloseDate" placeholder="Closing Date" />
                                         </div>
                                     </div>
                                     <div class="form-group">
@@ -168,6 +168,5 @@
         } else {
             $('#charNum').text(0 + len);
         }
-    }
-    ;
+    };
 </script>

@@ -8,10 +8,13 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>CVJobs - Home</title>
+    <title>CVJobs</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="<?php echo base_url('Assets/css/bootstrap.min.css') ?>" rel="stylesheet">
+
+	<!-- jQuery UI Datepicker CSS -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 
     <!-- OwlCarousel2 CSS -->
     <link href="<?php echo base_url('Assets/css/owl.carousel.css') ?>" rel="stylesheet">

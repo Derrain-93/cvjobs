@@ -208,6 +208,9 @@ td, th {
   border: 1px solid #ccc; 
   text-align: left; 
 }
+.ui-datepicker-calendar {
+    display: inline-grid !important;
+}
 
 
 /* content styles */
@@ -675,32 +678,31 @@ td, th {
         width: 100%;
     }
 }
-@media 
-only screen and (max-width: 760px),
+@media only screen and (max-width: 760px),
 (min-device-width: 768px) and (max-device-width: 1024px)  {
     .img-cell {
         width: 100%;
     }
-	table, thead, tbody, th, td, tr { 
+	table.table-bordered, thead.head-bordered, tbody.body-bordered, th.title-bordered, td.cell-bordered, tr.row-bordered { 
 		display: block; 
 	}
-	thead tr { 
+	thead tr.row-bordered { 
 		position: absolute;
 		top: -9999px;
 		left: -9999px;
 	}
-	tr {
+	tr.row-bordered {
         border: 1px solid #ccc;
     }
 	
-	td {
+	td.cell-bordered {
 		border: none;
 		border-bottom: 1px solid #eee; 
 		position: relative;
 		padding-left: 50%; 
 	}
 	
-	td:before {
+	td.cell-bordered:before {
 		position: absolute;
 		top: 6px;
 		left: 6px;

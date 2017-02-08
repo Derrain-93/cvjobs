@@ -210,19 +210,20 @@ if (!isset($Jobs)) {
 } else {
     ?>
                                             <table class="table table-bordered">
+                                                <tbody class="body-bordered">
                                             <?php
                                             foreach ($Jobs as $row) {
                                                 ?>
-                                                    <tr>
-                                                        <td class="searched-job-number-list">
+                                                    <tr class="row-bordered">
+                                                        <td class="searched-job-number-list cell-bordered">
                                                             <span><?php echo $row['id']; ?></span>
                                                         </td>
-                                                        <td class="img-cell">
+                                                        <td class="img-cell cell-bordered">
                                                             <div class="img-holder">
                                                                 <img src="<?php echo base_url('Assets/img/Defaults/defaultUser.png') ?>" />
                                                             </div>
                                                         </td>
-                                                        <td>        
+                                                        <td class="cell-bordered">        
                                                             <span class="searched-job-post"><?php echo $row['title']; ?></span> - <span class="searched-job-company"><?php echo $row['companyName']; ?></span>
                                                             <br />
                                                             Location - <span class="searched-job-location"><?php echo $row['location']; ?></span>&emsp;Salary - <span class="searched-job-salary"><?php echo $row['salary']; ?> Negotiable</span>&emsp;Posted - <span class="searched-job-posted-date"><?php echo $row['openDate']; ?></span>
@@ -234,6 +235,7 @@ if (!isset($Jobs)) {
                                                     </tr>
     <?php }
     ?>
+                                                </tbody>
                                             </table>
     <?php
 }

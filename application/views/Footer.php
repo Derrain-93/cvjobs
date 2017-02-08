@@ -129,6 +129,12 @@
 <!-- Bootstrap Core JavaScript -->
 <script src="<?php echo base_url('Assets/js/bootstrap.min.js') ?>"></script>
 
+<!-- Moment JavaScript -->
+<script src="<?php echo base_url('Assets/js/moment.min.js') ?>"></script>
+
+<!-- jQuery UI Datepicker JavaScript -->
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 <!-- OwlCarousel2 js -->
 <script src="<?php echo base_url('Assets/js/owl.carousel.js') ?>"></script>
 
@@ -177,6 +183,18 @@
                     loop: false
                 }
             }
+        });
+    });
+
+    
+
+    $(function () {
+        $( "#openDate" ).datepicker({
+            dateFormat: 'dd-mm-yy'
+        });
+
+        $( "#closeDate" ).datepicker({
+            dateFormat: 'dd-mm-yy'
         });
     });
 </script>
