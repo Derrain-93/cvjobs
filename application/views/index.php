@@ -213,11 +213,12 @@
                                                     <tr class="row-bordered">
                                                         <td class="searched-job-number-list cell-bordered">
 =======
+                                                <tbody class="body-bordered">
                                                 <?php
                                                 foreach ($Jobs as $row) {
                                                     ?>
-                                                    <tr>
-                                                        <td class="searched-job-number-list">
+                                                    <tr class="row-bordered">
+                                                        <td class="searched-job-number-list cell-bordered">
 >>>>>>> 24d9f05b8c23521e0a2c51833b7c25cbf1f80553
                                                             <span><?php echo $row['id']; ?></span>
                                                         </td>
