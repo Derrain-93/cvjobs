@@ -7,7 +7,13 @@
                         <?php echo $error ?>
                         
                         <?php echo form_open('Login/authenticate', 'class="form-horizontal"'); ?>
-                        
+
+                            <div class="form-group">
+                                <img id="profileImg" class="col-sm-4" src="<?php echo base_url('Assets/img/Defaults/defaultPreview.png') ?>" />
+                                <div class="col-sm-8">
+                                    <input type="file" name="userfile" class="form-control" id="profileImgUp" accept="image/*" />
+                                </div>
+                            </div>                        
                             <div class="form-group">
                                 <label class="control-label col-sm-4" for="compName">Company Name:</label>
                                 <div class="col-sm-8">
@@ -51,4 +57,18 @@
             </div>
         </div>
     </div>
+
+    <script>
+        document.getElementById("profileImgUp").onchange = function () {
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                // get loaded data and render thumbnail.
+                document.getElementById("profileImg").src = e.target.result;
+            };
+
+            // read the image file as a data URL.
+            reader.readAsDataURL(this.files[0]);
+        };
+    </script>
     <!-- /.container -->
