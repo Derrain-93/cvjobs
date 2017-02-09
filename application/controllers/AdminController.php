@@ -1,11 +1,24 @@
 <?php
-class JobsController extends CI_Controller {
+class AdminController extends CI_Controller {
     
     public function index() {
         $this->load->helper(array('form', 'url'));
-        $this->load->view('Header');
-        $this->load->view('AdminPannel');
-        $this->load->view('Footer');
+        $this->load->model('Job');
+        $data['Jobs']=$this->Job->getAllJobs();
+        $data['JobTypes']=$this->Job->getAllJobTypes(); 
+        
+        $this->load->view('AdminHeader');
+        $this->load->view('AdminPanel',$data);
+        $this->load->view('AdminFooter');
+    }
+    
+    function test()
+    {
+        $UserName="chinthana@asd.com";
+          $Pw="123";      
+        $this->load->model('User');
+        $user = $this->User->getUserType($UserName, $Pw);
+        echo $user;
     }
 }
     

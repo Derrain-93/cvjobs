@@ -42,7 +42,7 @@
                 <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="#">
+                            <a href="<?php echo base_url('index.php/Login/destroyUser') ?>">
                                 <p>Logout</p>
                             </a>
                         </li>

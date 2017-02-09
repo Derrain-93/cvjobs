@@ -12,6 +12,18 @@ class User extends CI_Model {
         return $query->first_row('array');
     }
     
+    function getUserType($UserName,$Pw)
+    {
+          $where = array(
+            'username' => $UserName,
+            'pw' => $Pw,
+        );
+        $this->db->select()->from('users')->where($where);
+        $query = $this->db->get();
+        return $query->row('role');
+    }
+    
+    
     function regUser($CompanyName,$CompanyLocation,$CompanyEmail,$Password,$Tel,$website)
     {
         $query_str="INSERT INTO users(username,pw,role,CompanyName,CompanyLocation,Tp,WebSite) values(?,?,?,?,?,?,?)";

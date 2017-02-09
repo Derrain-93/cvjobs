@@ -30,7 +30,9 @@ class Login extends CI_Controller {
             $data = array(
                 'error' => 'Login Error'
             );
-              $this->load->helper(array('form', 'url'));
+              $this->load->helper(array('form', 'url'));              
+               
+              
             $this->load->view('Header');
             $this->load->view('Login', $data);
             $this->load->view('Footer');
@@ -39,7 +41,22 @@ class Login extends CI_Controller {
             $data = array(
                 'error' => ''
             );
-            
+             $this->load->model('User');
+            $userType = $this->User->getUserType($UserName, $Pw);
+               
+               if($userType=="Admin")
+               {
+                           $this->load->helper(array('form', 'url'));
+        $this->load->model('Job');
+        $data['Jobs']=$this->Job->getAllJobs();
+        $data['JobTypes']=$this->Job->getAllJobTypes(); 
+        
+        $this->load->view('AdminHeader');
+        $this->load->view('AdminPanel',$data);
+        $this->load->view('AdminFooter');
+               }
+               else
+               {
             $this->session->set_userdata('username', $user['username']);
             $this->load->helper(array('form', 'url'));
             $this->load->model('Job');
@@ -48,6 +65,11 @@ class Login extends CI_Controller {
             $this->load->view('Header');
             $this->load->view('index',$data);
             $this->load->view('Footer');
+               }
+            
+            
+            
+           
         }
     }
     
