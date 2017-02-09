@@ -80,6 +80,66 @@ class Login extends CI_Controller {
          $this->load->view('Header');
          $this->load->view('Register');
          $this->load->view('Footer');
+         
+        
+    }
+    
+    public function RegisterNewUser()
+    {
+         $CompanyName = $this->input->post('compName');
+         $CompanyLocation = $this->input->post('compLoc');
+         $CompanyEmail = $this->input->post('compEmail');
+         $Password = $this->input->post('password');
+         $Tel = $this->input->post('compTel');
+         $website = $this->input->post('compWeb');
+         
+         $this->load->model('User');
+         $this->User->regUser($CompanyName,$CompanyLocation,$CompanyEmail,$Password,$Tel,$website);        
+         $maxId= $this->User->GetMaxProfileId();
+         
+        $config['upload_path'] = './Assets/Uploads/UserProfilePic';
+        $config['allowed_types'] = 'gif|jpg|png';
+        $config['file_name'] = $maxId;
+        $this->load->library('upload', $config);
+        if (!$this->upload->do_upload('profileImgUp')) {
+            //  $error = array('error' => $this->upload->display_errors());
+            //   $this->load->view('upload_form', $error);
+        } else {
+            //$data = array('upload_data' => $this->upload->data());
+            // $this->load->view('upload_success', $data);
+        }
+         
+         
+         
+         
+         
+         
+         
+         
+         $this->load->view('Header');
+         $this->load->view('Register');
+         $this->load->view('Footer');
+         
+    }
+    
+    public function destroyUser()
+    {
+        session_destroy();
+        
+          $data = array(
+                'error' => ''
+            );
+        
+        $user['username']="unRegUser";
+       $this->session->set_userdata('username', $user['username']);
+        
+        $this->load->helper(array('form', 'url'));
+        $this->load->model('Job');
+        $data['Jobs']=$this->Job->getAllJobs();
+        $data['JobTypes']=$this->Job->getAllJobTypes();       
+        $this->load->view('Header');
+        $this->load->view('index',$data);
+        $this->load->view('Footer');
     }
 
 }
