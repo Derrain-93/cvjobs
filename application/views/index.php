@@ -333,29 +333,29 @@
 
 <script>
       function newWindow(id) {
-          alert(id);
-          
-          $.ajax ({
-                        url:"<?php echo site_url('JobsController/AjaxSinglePost'); ?>",
-                        //type:'POST',
-                        //data:email,
-                        type:"GET",
-                        data:{id:""+id},
-                        //dataType:"json",
-                       
-                        success:function(msg)
-                        {
-                           
-                           window.open("viewJobDetails.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=300,width=600,height=600");
-                           //$('body').html(msg);
-                           // alert(msg);
-                        }
-
-
-                    }
-
-                    );
-          
+          //alert(id);
+          window.open("viewJobDetails.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=300,width=600,height=600");
+//          $.ajax ({
+//                        url:"<?php echo site_url('JobsController/AjaxSinglePost'); ?>",
+//                        //type:'POST',
+//                        //data:email,
+//                        type:"GET",
+//                        data:{id:""+id},
+//                        //dataType:"json",
+//                       
+//                        success:function(msg)
+//                        {
+//                           
+//                           window.open("viewJobDetails.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=300,width=600,height=600");
+//                           //$('body').html(msg);
+//                           // alert(msg);
+//                        }
+//
+//
+//                    }
+//
+//                    );
+//          
           
           
           
