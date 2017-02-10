@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.5.1
--- http://www.phpmyadmin.net
+-- version 4.6.4
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 09, 2017 at 05:50 PM
--- Server version: 5.7.11
--- PHP Version: 5.6.19
+-- Generation Time: Feb 10, 2017 at 04:46 AM
+-- Server version: 5.7.14
+-- PHP Version: 5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -101,7 +101,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `pw`, `role`, `CompanyName`, `CompanyLocation`, `Tp`, `WebSite`) VALUES
-(1, 'chinthana@asd.com', '123', 'admin', '1', '1', '1', '1');
+(1, 'admin@admin.com', 'admin@123', 'Admin', '1', '1', '1', '1'),
+(10, 'john@yopmail.com', '123', 'User', 'John & Sons Co.', 'Detroit, US', '989-892-0119', 'www.johnsons.us');
 
 --
 -- Indexes for dumped tables
@@ -143,7 +144,7 @@ ALTER TABLE `jobtypes`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
