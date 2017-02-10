@@ -83,9 +83,9 @@
                                                 <?php
                                                 if($_SESSION['username']!="unRegUser")
                                                 {?>
-                                                      <li>
-							<a href="<?php echo base_url('index.php/Login/destroyUser') ?>">Sign Out</a>                                                        
-                                                        </li>
+                                                      <!--<li>
+							<a href="<?php //echo base_url('index.php/Login/destroyUser') ?>">Sign Out</a>                                                        
+                                                        </li>-->
                                                <?php }
                                                 else
                                                 { ?>

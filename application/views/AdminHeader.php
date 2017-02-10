@@ -22,6 +22,8 @@
     <!--     Fonts and icons     -->
     <link href="<?php echo base_url('Assets/Admin/css/pe-icon-7-stroke.css') ?>" rel="stylesheet" />
 
+    <link href="<?php echo base_url('Assets/Admin/css/admin.css') ?>" rel="stylesheet" />
+
 </head>
 
 <body>

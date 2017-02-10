@@ -1,0 +1,58 @@
+.actions-inline {
+    display: inline-flex;
+}
+.padding-actions {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.padding-actions i {
+    font-size: 36px;
+}
+.padding-actions i.pe-7s-check {
+    color: #3FDD1C;
+}
+.padding-actions i.pe-7s-close-circle {
+    color: #DD1C1C;
+}
+
+.job-number-list {
+    font-family: Calibri;
+    font-weight: bold;
+}
+.job-post {
+    color: #3026ff;
+    font-family: Calibri;
+    font-weight: bold;
+    font-size: 1.75rem;
+}
+
+@media only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+	table.table-bordered, thead.head-bordered, tbody.body-bordered, th.title-bordered, td.cell-bordered, tr.row-bordered { 
+		display: block; 
+	}
+	thead tr.row-bordered { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+	tr.row-bordered {
+        border: 1px solid #ccc;
+    }
+	
+	td.cell-bordered {
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	
+	td.cell-bordered:before {
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+	}
+}

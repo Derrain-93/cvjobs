@@ -39,16 +39,16 @@
                     </button>
                     <a class="navbar-brand" href="#">Jobs List</a>
                 </div>
-                <div class="collapse navbar-collapse">
+                <!--<div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-right">
                         <li>
-                            <a href="<?php echo base_url('index.php/Login/destroyUser') ?>">
+                            <a href="<?php //echo base_url('index.php/Login/destroyUser') ?>">
                                 <p>Logout</p>
                             </a>
                         </li>
 						<li class="separator hidden-lg hidden-md"></li>
                     </ul>
-                </div>
+                </div>-->
             </div>
         </nav>
 
@@ -149,21 +149,6 @@
                                                             <br />
                                                             <span class="job-description"><?php echo $row['description']; ?></span>
                                                         </td>
-                                                        <td class="cell-bordered">
-                                                            <span class="actions-inline">
-                                                                <span class="padding-actions">
-                                                                    <a href="#">
-                                                                        <i class="pe-7s-check"></i>
-                                                                    </a>
-                                                                </span>
-
-                                                                <span class="padding-actions">
-                                                                    <a href="#">
-                                                                        <i class="pe-7s-close-circle"></i>
-                                                                    </a>
-                                                                </span>
-                                                            </span>
-                                                        </td>
                                                     </tr>
                                                 <?php }
                                                 ?>
@@ -201,21 +186,6 @@
                                                             Location - <span class="job-location"><?php echo $row['location']; ?></span>&emsp;Salary - <span class="job-salary"><?php echo $row['salary']; ?> Negotiable</span>&emsp;Posted - <span class="job-posted-date"><?php echo $row['openDate']; ?></span>
                                                             <br />
                                                             <span class="job-description"><?php echo $row['description']; ?></span>
-                                                        </td>
-                                                        <td class="cell-bordered">
-                                                            <span class="actions-inline">
-                                                                <span class="padding-actions">
-                                                                    <a href="#">
-                                                                        <i class="pe-7s-check"></i>
-                                                                    </a>
-                                                                </span>
-
-                                                                <span class="padding-actions">
-                                                                    <a href="#">
-                                                                        <i class="pe-7s-close-circle"></i>
-                                                                    </a>
-                                                                </span>
-                                                            </span>
                                                         </td>
                                                     </tr>
                                                 <?php }

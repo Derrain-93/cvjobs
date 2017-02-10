@@ -41,7 +41,7 @@ class Login extends CI_Controller {
             $data = array(
                 'error' => ''
             );
-             $this->load->model('User');
+            $this->load->model('User');
             $userType = $this->User->getUserType($UserName, $Pw);
                
                if($userType=="Admin")
@@ -148,12 +148,12 @@ class Login extends CI_Controller {
     {
         session_destroy();
         
-          $data = array(
-                'error' => ''
-            );
+        $data = array(
+            'error' => ''
+        );
         
         $user['username']="unRegUser";
-       $this->session->set_userdata('username', $user['username']);
+        $this->session->set_userdata('username', $user['username']);
         
         $this->load->helper(array('form', 'url'));
         $this->load->model('Job');
