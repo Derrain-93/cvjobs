@@ -606,6 +606,11 @@ td, th {
 
 
 /* media queries */
+@media (max-width: 1300px) {
+	.navbar-default .navbar-collapse > .navbar-nav {
+        font-size: 1em;
+    }
+}
 @media (max-width: 1202px) {
 	.content {
 		position: relative;
@@ -621,6 +626,11 @@ td, th {
     }
     .contact-side-advert-bg > .contact-side-advert-wrapper > .contact-side-advert-block img {
         width: 80%;
+    }
+}
+@media (max-width: 1080px) {
+	.navbar-default .navbar-collapse > .navbar-nav {
+        font-size: 0.65em;
     }
 }
 @media (max-width: 850px) {
